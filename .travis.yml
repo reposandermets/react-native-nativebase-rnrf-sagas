@@ -3,8 +3,8 @@ language: objective-c
 osx_image: xcode8.3
 
 install:
-  - mkdir -p /Users/travis/build/account/.nvm
-  - export NVM_DIR="/Users/travis/build/account/.nvm"
+  - mkdir -p /Users/travis/build/reposandermets/.nvm
+  - export NVM_DIR="/Users/travis/build/reposandermets/.nvm"
   - brew install nvm
   - source $(brew --prefix nvm)/nvm.sh
   - nvm install 8
@@ -12,4 +12,4 @@ install:
   - yarn
 
 script:
-  - npm test
+  - jest
