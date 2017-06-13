@@ -1,4 +1,4 @@
-# react-native-srtarter
+# react-native-nativebase-rnrf-sagas
 
 [![Build Status](https://travis-ci.org/reposandermets/react-native-nativebase-rnrf-sagas.svg?branch=master)](https://travis-ci.org/reposandermets/react-native-nativebase-rnrf-sagas)
 
