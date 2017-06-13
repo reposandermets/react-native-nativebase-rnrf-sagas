@@ -1,5 +1,7 @@
 # react-native-srtarter
 
+[![Build Status](https://travis-ci.org/reposandermets/react-native-nativebase-rnrf-sagas.svg?branch=master)](https://travis-ci.org/reposandermets/react-native-nativebase-rnrf-sagas)
+
 ## Install
 
     yarn
