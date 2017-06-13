@@ -14,3 +14,7 @@
 
 React Native  
 Nativebase
+
+## Travis ideas
+
+https://github.com/facebook/react-native/blob/master/.travis.yml
