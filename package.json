@@ -8,9 +8,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo/vector-icons": "^5.0.0",
     "native-base": "^2.1.5",
     "react": "16.0.0-alpha.12",
-    "react-native": "0.45.1"
+    "react-native": "0.45.1",
+    "react-native-router-flux": "^3.40.0",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-form": "^6.8.0",
+    "redux-saga": "^0.15.3",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",

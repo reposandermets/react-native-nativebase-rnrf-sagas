@@ -15,8 +15,26 @@
 ## Packages
 
 React Native  
-Nativebase
+Nativebase  
+react-native-router-flux  
+react-redux  
+redux-form  
+redux-saga  
+reselect  
 
-## Travis ideas
+## Misc
+
+### Ideas for Travis
 
 https://github.com/facebook/react-native/blob/master/.travis.yml
+
+### Problems during dev build in local env
+
+```No bundle URL present``` or ```Unable to resolve module...```
+
+    watchman watch-del-all && \
+      rm -rf node_modules && yarn && \
+      rm -fr $TMPDIR/react-* && \
+      npm start -- reset-cache
+
+    react-native link
