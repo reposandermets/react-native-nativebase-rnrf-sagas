@@ -3,8 +3,7 @@ import { Counter } from '../../components/counter';
 import { createSelector, createStructuredSelector } from 'reselect';
 import {
   increment, decrement, zero,
-  multiplyBy,
-  incrementAsync
+  multiplyBy, incrementAsync
 } from './actions';
 
 const selectCount = (state) => state.counter;

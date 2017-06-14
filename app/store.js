@@ -16,12 +16,15 @@ export default function getStore(cb) {
     applyMiddleware(sagaMiddleware)
   );
 
+  sagaMiddleware.run(rootSaga);
+
+/* //Needs more work adding perstStore nad keeping render tests running
   persistStore(store, { storage: AsyncStorage }, () => {
     sagaMiddleware.run(rootSaga);
     if (cb) {
       cb();
     }
   });
-
+*/
   return store;
 }

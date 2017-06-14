@@ -7,6 +7,6 @@ export function* incrementAsync() {
   yield put({ type: 'INCREMENT' });
 }
 
-export function* watchIncrementAsync() {
+export function* watchCounter() {
   yield takeEvery('INCREMENT_ASYNC', incrementAsync);
 }
