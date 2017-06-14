@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/reposandermets/react-native-nativebase-rnrf-sagas.svg?branch=master)](https://travis-ci.org/reposandermets/react-native-nativebase-rnrf-sagas)
 
+## Architecture
+
+This projects tries to follow guidelines from [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate).
 ## Install
 
     yarn
