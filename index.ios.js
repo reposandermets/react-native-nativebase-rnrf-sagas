@@ -4,7 +4,7 @@ import { App } from './app/main';
 
 export default class RNStarter extends Component {
   render() {
-    return (<App />);
+    return <App />;
   }
 }
 
