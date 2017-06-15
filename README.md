@@ -46,4 +46,6 @@ https://github.com/facebook/react-native/blob/master/.travis.yml
 
     node _fake-backend/server.js
 
-    Add your local LAN IP to app/config
+    ifconfig
+
+Add your local LAN IP to app/config/index.js as baseApiRoot
