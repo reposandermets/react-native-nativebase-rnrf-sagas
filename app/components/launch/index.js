@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   Container, Content, Text, Header, Left,
   Right, Body, Title, Button

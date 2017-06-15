@@ -1,11 +1,11 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import { AsyncStorage } from 'react-native';
-import { persistStore } from 'redux-persist';
+//import { AsyncStorage } from 'react-native';
+//import { persistStore } from 'redux-persist';
 
-import getRootReducer from "./reducers";
-import rootSaga from "./sagas";
+import getRootReducer from './reducers';
+import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { Router, Scene } from 'react-native-router-flux';
@@ -13,8 +13,8 @@ export class AppNavigator extends Component {
   render() {
     return (
       <RouterWithRedux>
-        <Scene key="root">
-          <Scene key="LaunchPage" component={LaunchPage} hideNavBar initial />
+        <Scene key='root'>
+          <Scene key='LaunchPage' component={LaunchPage} hideNavBar initial />
         </Scene>
       </RouterWithRedux>
     );

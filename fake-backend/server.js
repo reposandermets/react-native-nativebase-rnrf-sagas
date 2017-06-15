@@ -14,7 +14,7 @@ const auth = require('./auth/index');
 auth.getAuth(app);
 auth.postAuth(app);
 
-app.use((req, res, next) => res.status(404).send("NOT FOUND"));
+app.use((req, res, next) => res.status(404).send('NOT FOUND'));
 
 app.listen(3000, () => {
   console.log('Listening on 3000!');

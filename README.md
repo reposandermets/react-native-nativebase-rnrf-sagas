@@ -41,3 +41,7 @@ https://github.com/facebook/react-native/blob/master/.travis.yml
       npm start -- reset-cache
 
     react-native link
+
+### Run fake backend
+
+    node fake-backend/server.js
