@@ -44,4 +44,4 @@ https://github.com/facebook/react-native/blob/master/.travis.yml
 
 ### Run fake backend
 
-    node fake-backend/server.js
+    node _fake-backend/server.js

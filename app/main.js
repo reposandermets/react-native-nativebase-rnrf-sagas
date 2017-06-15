@@ -17,7 +17,7 @@ export class App extends Component {
       isLoading: false
     };
 
-    //Needs more work adding perstStore nad keeping render tests running
+    //Needs more work adding perstStore and keeping render tests running at the same time
     //const theStore = getStore(() => this.setState({ isLoading: false }));
 
     this.state.store = getStore();
