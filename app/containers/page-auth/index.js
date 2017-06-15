@@ -6,7 +6,7 @@ import {
 } from 'native-base';
 import { Field, reduxForm } from 'redux-form';
 import {
-  getMoviesFromFbApi, getAuth, postAuth
+  getMoviesFromFbApi, postAuth
 } from '../../api/auth';
 
 const validate = values => {
@@ -51,6 +51,15 @@ const AuthForm = props => {
 
   const submit = valuesObj => {
     console.log('submitting form', valuesObj);
+    //just testing
+    getMoviesFromFbApi()
+      .then(r => {
+        console.log(r);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+    //example how not to log in
     postAuth(valuesObj)
       .then(r => {
         console.log(r);
