@@ -3,6 +3,9 @@ import {
   Container, Content, Text, Header, Left,
   Right, Body, Title, Button
 } from 'native-base';
+import {
+  getMoviesFromFbApi, getAuth, postAuth
+} from '../../api/auth';
 
 export const Launch = props => {
   return (
@@ -15,7 +18,34 @@ export const Launch = props => {
         <Right></Right>
       </Header>
       <Content>
-        <Button onPress={() => alert('Hello')}>
+        <Button
+          onPress={() => {
+            getMoviesFromFbApi()
+              .then(r => {
+                console.log(r);
+              })
+              .catch(e => {
+                console.log(e);
+              });
+
+            getAuth()
+              .then(r => {
+                console.log(r);
+              })
+              .catch(e => {
+                console.log(e);
+              })
+
+            postAuth()
+              .then(r => {
+                console.log(r);
+              })
+              .catch(e => {
+                console.log(e);
+              })
+
+          }}
+        >
           <Text>Hello</Text>
         </Button>
       </Content>

@@ -45,3 +45,5 @@ https://github.com/facebook/react-native/blob/master/.travis.yml
 ### Run fake backend
 
     node _fake-backend/server.js
+
+    Add your local LAN IP to app/config
