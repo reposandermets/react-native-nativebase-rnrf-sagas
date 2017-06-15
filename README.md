@@ -41,3 +41,11 @@ https://github.com/facebook/react-native/blob/master/.travis.yml
       npm start -- reset-cache
 
     react-native link
+
+### Run fake backend
+
+    node _fake-backend/server.js
+
+    ifconfig
+
+Add your local LAN IP to app/config/index.js as baseApiRoot
