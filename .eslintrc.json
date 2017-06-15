@@ -18,6 +18,14 @@
     "no-unreachable": "error",
     "constructor-super": "error",
     "valid-typeof": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 1,
+        "maxEOF": 1
+      }
+    ],
     "quotes": [
       2,
       "single",

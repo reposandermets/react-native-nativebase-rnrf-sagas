@@ -4,8 +4,10 @@ import {
   Container, Item, Input, Header,
   Body, Content, Title, Button, Text
 } from 'native-base';
-
 import { Field, reduxForm } from 'redux-form';
+import {
+  getMoviesFromFbApi, getAuth, postAuth
+} from '../../api/auth';
 
 const validate = values => {
 
@@ -49,6 +51,13 @@ const AuthForm = props => {
 
   const submit = valuesObj => {
     console.log('submitting form', valuesObj);
+    postAuth(valuesObj)
+      .then(r => {
+        console.log(r);
+      })
+      .catch(e => {
+        console.log(e);
+      });
   }
 
   return (
@@ -63,12 +72,12 @@ const AuthForm = props => {
         <Field name="email" component={renderInput} />
         <Field name="name" component={renderInput} />
 
-        <Button onPress={handleSubmit(submit)}>
+        <Button block primary onPress={handleSubmit(submit)}>
           <Text>Submit</Text>
         </Button>
 
         <Button block primary onPress={reset}>
-          <Text>Submit</Text>
+          <Text>Reset</Text>
         </Button>
       </Content>
     </Container>
