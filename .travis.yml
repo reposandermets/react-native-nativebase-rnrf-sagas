@@ -8,8 +8,9 @@ install:
   - brew install nvm
   - source $(brew --prefix nvm)/nvm.sh
   - nvm install 8
-  - npm i -g yarn jest
+  - npm i -g yarn eslint jest
   - yarn
 
 script:
+  - eslint app/
   - jest

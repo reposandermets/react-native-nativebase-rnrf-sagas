@@ -18,13 +18,13 @@ export default function getStore(cb) {
 
   sagaMiddleware.run(rootSaga);
 
-/* //Needs more work adding perstStore nad keeping render tests running
-  persistStore(store, { storage: AsyncStorage }, () => {
-    sagaMiddleware.run(rootSaga);
-    if (cb) {
-      cb();
-    }
-  });
-*/
+  /* //Needs more work adding perstStore nad keeping render tests running
+    persistStore(store, { storage: AsyncStorage }, () => {
+      sagaMiddleware.run(rootSaga);
+      if (cb) {
+        cb();
+      }
+    });
+  */
   return store;
 }

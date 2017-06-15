@@ -4,9 +4,11 @@ import {
   Container, Item, Input, Header,
   Body, Content, Title, Button, Text
 } from 'native-base';
+
 import { Field, reduxForm } from 'redux-form';
 
 const validate = values => {
+
   const error = {};
   error.email = '';
   error.name = '';
@@ -30,17 +32,11 @@ const validate = values => {
   return error;
 };
 
-class AuthForm extends Component {
+const AuthForm = props => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isReady: false
-    };
-    this.renderInput = this.renderInput.bind(this);
-  }
+  const { handleSubmit, reset } = props;
 
-  renderInput({ input, label, type, meta: { touched, error, warning } }) {
+  const renderInput = ({ input, label, type, meta: { touched, error, warning } }) => {
     let hasError = false;
     if (error !== undefined) {
       hasError = true;
@@ -49,27 +45,35 @@ class AuthForm extends Component {
       <Input {...input} />
       {hasError ? <Text>{error}</Text> : <Text />}
     </Item>)
+  };
+
+  const submit = valuesObj => {
+    console.log('submitting form', valuesObj);
   }
-  render() {
-    const { handleSubmit, reset } = this.props;
-    return (
-      <Container>
-        <Header>
-          <Body>
-            <Title>Redux Form</Title>
-          </Body>
-        </Header>
-        <Content padder>
-          <Field name="email" component={this.renderInput} />
-          <Field name="name" component={this.renderInput} />
-          <Button block primary onPress={reset}>
-            <Text>Submit</Text>
-          </Button>
-        </Content>
-      </Container>
-    )
-  }
-}
+
+  return (
+    <Container>
+      <Header>
+        <Body>
+          <Title> Login </Title>
+        </Body>
+      </Header>
+      <Content padder>
+
+        <Field name="email" component={renderInput} />
+        <Field name="name" component={renderInput} />
+
+        <Button onPress={handleSubmit(submit)}>
+          <Text>Submit</Text>
+        </Button>
+
+        <Button block primary onPress={reset}>
+          <Text>Submit</Text>
+        </Button>
+      </Content>
+    </Container>
+  );
+};
 
 export default reduxForm({
   form: 'test',
