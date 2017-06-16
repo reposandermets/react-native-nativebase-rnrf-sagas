@@ -44,8 +44,18 @@ https://github.com/facebook/react-native/blob/master/.travis.yml
 
 ### Run fake backend
 
+For this to work both device and pc have to bre in the same (W)LAN
     node _fake-backend/server.js
 
     ifconfig
 
 Add your local LAN IP to app/config/index.js as baseApiRoot
+
+For http to work added to ./ios/RNStarter/Info.plist
+
+    <key>NSAppTransportSecurity</key>
+	<dict>
+		<!--Include to allow all connections (DANGER)-->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>

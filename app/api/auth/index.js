@@ -15,14 +15,6 @@ export const getMoviesFromFbApi = () => {
     });
 }
 
-//not yet sure if HTTP working in iPhone
-/* If needed add ./ios/RNStarter/Info.plist
-  <key>NSAppTransportSecurity</key>
-  <dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true/>
-  </dict>
- */
 export const getAuth = () => {
   return fetch(
     `${Config.baseApiRoot}/auth`, {
